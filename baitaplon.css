@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f8fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, #43ade6, #000428);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5em;
+  letter-spacing: 1px;
+}
+
+header p {    
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+
+.block {
+  max-width: 900px;
+  margin: 60px auto;
+  background: white;
+  border-radius: 12px;
+  padding: 30px 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1s forwards;
+}
+
+.block:nth-child(even) {
+  animation-delay: 0.2s;
+}
+.block:nth-child(odd) {
+  animation-delay: 0.4s;
+}
+
+.block h2 {
+  color: #004e92;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "✔ ";
+  color: #004e92;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 4px solid #004e92;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #000428;
+  color: white;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+/* Hiệu ứng animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hiệu ứng hover */
+.block:hover {
+  transform: translateY(-5px);
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #d63d3d;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, #222, #444);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 4px solid #ff6600;
+}
+
+header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-style: italic;
+}
+
+/* Các phần nội dung */
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #ff6600;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 25px;
+}
+
+strong {
+  color: #31b8b2;
+}
+
+/* Footer */
+footer {
+  background: #278fda;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 4px solid #ff6600;
+}
+/* PHẦN WEBSITE BÁN GIÀY */
+.shop {
+  background: #fff;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.shop h2 {
+  color: #ff6600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.shop p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Danh sách sản phẩm */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  background: #fafafa;
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e65c00;
+}
+
+/* Liên hệ */
+.contact {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 500;
+}
