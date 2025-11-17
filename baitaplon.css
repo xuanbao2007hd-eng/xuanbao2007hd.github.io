@@ -2,237 +2,147 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
 
+
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f7f8fc;
+  background: #71c9d3;
   color: #333;
-  line-height: 1.6;
 }
 
-header {
-  background: linear-gradient(135deg, #43ade6, #000428);
-  color: white;
+/* ===== HEADER ===== */
+.main-header {
+  background: linear-gradient(135deg, #007bff, #ff6600);
+  color: #9d7dbe;
   text-align: center;
   padding: 60px 20px;
-  animation: fadeIn 2s ease-in-out;
+
 }
 
-header h1 {
+.main-header h1 {
   font-size: 2.5em;
-  letter-spacing: 1px;
 }
 
-header p {    
-  font-size: 1.2em;
-  opacity: 0.8;
+.navbar {
+  
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(6px);
+  padding: 12px 0;
+  z-index: 1000;
+  border-bottom: 2px solid #ff6600;
 }
 
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.navbar a {
+  color: #74ebd5;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.navbar a:hover {
+  background: #ff6600;
+  
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: #f3a085;
+  min-width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #007bff;
+  display: block;
+  padding: 10px;
+}
+
+.dropdown-content a:hover {
+  background: #ea85e0;
+  color: #ff6600;
+  
+}
+
+/* ===== BLOCK ===== */
 .block {
   max-width: 900px;
-  margin: 60px auto;
-  background: white;
+  margin: 40px auto;
+  background: #cfed4a;
+  padding: 30px;
   border-radius: 12px;
-  padding: 30px 40px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  opacity: 0;
-  transform: translateY(50px);
-  animation: slideUp 1s forwards;
-}
-
-.block:nth-child(even) {
-  animation-delay: 0.2s;
-}
-.block:nth-child(odd) {
-  animation-delay: 0.4s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+ 
 }
 
 .block h2 {
-  color: #004e92;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-}
-
-ul li::before {
-  content: "✔ ";
-  color: #004e92;
-}
-
-blockquote {
-  font-style: italic;
-  color: #555;
-  border-left: 4px solid #004e92;
-  padding-left: 15px;
-  margin-top: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #000428;
-  color: white;
-  font-size: 0.9em;
-  margin-top: 40px;
-}
-
-/* Hiệu ứng animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.9); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-@keyframes slideUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hiệu ứng hover */
-.block:hover {
-  transform: translateY(-5px);
-  transition: all 0.4s ease;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
-body {
-  background: #f2f2f2;
-  color: #d63d3d;
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  background: linear-gradient(90deg, #222, #444);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  border-bottom: 4px solid #ff6600;
-}
-
-header h1 {
-  font-size: 28px;
+  border-left: 5px solid #007bff;
+  padding-left: 10px;
   margin-bottom: 10px;
-}
-
-header p {
-  font-style: italic;
-}
-
-/* Các phần nội dung */
-section {
-  max-width: 900px;
-  margin: 40px auto;
-  background: white;
-  padding: 25px 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-h2 {
   color: #ff6600;
-  margin-bottom: 10px;
 }
 
-ul {
-  list-style-type: square;
-  margin-left: 25px;
-}
-
-strong {
-  color: #31b8b2;
-}
-
-/* Footer */
-footer {
-  background: #278fda;
-  color: #fff;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
-  font-size: 14px;
-  border-top: 4px solid #ff6600;
-}
-/* PHẦN WEBSITE BÁN GIÀY */
+/* ===== PRODUCT ===== */
 .shop {
-  background: #fff;
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.shop h2 {
-  color: #ff6600;
-  margin-bottom: 10px;
   text-align: center;
+  
 }
 
-.shop p {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-/* Banner */
-.banner img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-/* Danh sách sản phẩm */
 .product-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .product {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 220px;
+  width: 200px;
   padding: 15px;
-  text-align: center;
   background: #fafafa;
+  border-radius: 12px;
+  border: 1px solid #ddd;
   transition: 0.3s;
-}
-
-.product:hover {
-  transform: scale(1.05);
 }
 
 .product img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-button {
-  background: #ff6600;
-  color: white;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(205, 45, 45, 0.2);
+}
+
+.product button {
+  
   margin-top: 10px;
+  background: #d2e82f;
+  color: rgb(174, 47, 94);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-button:hover {
-  background: #e65c00;
-}
-
-/* Liên hệ */
-.contact {
-  text-align: center;
-  margin-top: 30px;
-  font-weight: 500;
+.product button:hover {
+  background: #0056b3;
 }
